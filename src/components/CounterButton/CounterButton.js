@@ -19,7 +19,7 @@ export default class CounterButton extends Component {
   render() {
     const {count, increment} = this.props; // eslint-disable-line no-shadow
     let {className} = this.props;
-    className += ' btn btn-default';
+    className += ' button-primary';
     return (
       <button className={className} onClick={increment}>
         You have clicked me {count} time{count === 1 ? '' : 's'}.
@@ -27,4 +27,3 @@ export default class CounterButton extends Component {
     );
   }
 }
-

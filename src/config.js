@@ -16,7 +16,7 @@ module.exports = Object.assign({
   apiPort: process.env.APIPORT,
   app: {
     title: 'Lodestone',
-    description: 'All the modern best practices in one example.',
+    description: 'React + Redux + Skeleton',
     meta: {
       charSet: 'utf-8',
       property: {

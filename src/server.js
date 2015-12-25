@@ -101,6 +101,12 @@ app.use((req, res) => {
         if (status) {
           res.status(status);
         }
+
+        // console.log('===============================================================================');
+        // console.log(Object.keys(webpackIsomorphicTools.assets().styles.main));
+        // console.log(require('./containers/App/App.scss')._style);
+        // console.log(require('./theme/App.scss'));
+        // console.log('===============================================================================');
         res.send('<!doctype html>\n' +
           ReactDOM.renderToString(<Html assets={webpackIsomorphicTools.assets()} component={component} store={store}/>));
       }).catch((err) => {

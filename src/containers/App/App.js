@@ -1,8 +1,5 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
-// import { IndexLink } from 'react-router';
-// import { LinkContainer } from 'react-router-bootstrap';
-// import { Navbar, NavBrand, Nav, NavItem, CollapsibleNav } from 'react-bootstrap';
 import DocumentMeta from 'react-document-meta';
 import { isLoaded as isInfoLoaded, load as loadInfo } from 'redux/modules/info';
 import { isLoaded as isAuthLoaded, load as loadAuth, logout } from 'redux/modules/auth';
@@ -55,14 +52,15 @@ export default class App extends Component {
 
   render() {
     const {user} = this.props;
+    require('../../styles/main.scss');
     const styles = require('./App.scss');
     return (
       <div className={styles.app}>
-        <DocumentMeta {...config.app}/>
+        {<DocumentMeta {...config.app}/>}
         {user && <div style={{color: 'white', backgroundColor: 'red', fontSize: '8px'}}>
           <span>User is logged in</span>
         </div>}
-        <div className={styles.appContent}>
+        <div className={styles.container}>
           {this.props.children}
         </div>
         <InfoBar/>
