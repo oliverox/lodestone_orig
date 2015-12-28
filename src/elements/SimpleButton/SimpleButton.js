@@ -5,13 +5,13 @@ import React from 'react';
  *    'type'  : '' | <primary> | <fullWidth>
  */
 const SimpleButton = (prop) => {
-  const propArr = (prop.type) ? prop.type.split(' ') : [];
+  const propTypeArr = (prop.type) ? prop.type.split(' ') : [];
   const propMap = {
     'primary': 'button-primary',
     'fullWidth': 'u-full-width'
   };
   let cn = '';
-  propArr.forEach((type) => {
+  propTypeArr.forEach((type) => {
     if (type in propMap) {
       cn = (cn + ' ' + propMap[type]).trim();
     }

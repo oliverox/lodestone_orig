@@ -1,16 +1,16 @@
 .section {
   margin-bottom: 20px;
-  background-color: lightyellow;
-  border: 1px solid #f7f7f7;
 }
-.buttons {
-   background-color: none;
-}
-.grid {
+.gridRow {
 }
 .gridRow > div {
+  background: #EEE;
   text-align: center;
   border-radius: 4px;
-  margin-bottom: 5px;
-  background-color: lightgrey;
+  font-size: 1rem;
+  text-transform: uppercase;
+  line-height: 30px;
+  margin-bottom: .8rem;
+  font-weight: 600;
+  letter-spacing: .1rem;
 }

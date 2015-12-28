@@ -14,14 +14,14 @@ export default class Home extends Component {
       <Container>
         <h2>{config.app.title}</h2>
         <h4>{config.app.description}</h4>
-        <div className={styles.section + ' ' + styles.buttons}>
+        <div className={styles.section}>
           <h5>Buttons</h5>
           <div>
-            <SimpleButton type="" onClick={onButtonClick}>Simple button</SimpleButton>&nbsp;
+            <SimpleButton onClick={onButtonClick}>Simple button</SimpleButton>&nbsp;
             <SimpleButton onClick={onButtonClick} type="primary">Primary button</SimpleButton>
           </div>
         </div>
-        <div className={styles.section + ' ' + styles.grid}>
+        <div className={styles.section}>
           <h5>Grid</h5>
           <Row className={styles.gridRow}>
             <Column size={1}>one</Column><Column size={11}>eleven</Column>
@@ -40,6 +40,9 @@ export default class Home extends Component {
           </Row>
           <Row className={styles.gridRow}>
             <Column size={6}>six</Column><Column size={6}>six</Column>
+          </Row>
+          <Row className={styles.gridRow}>
+            <Column size={3}>three</Column><Column size={3}>three</Column><Column size={3}>three</Column><Column size={3}>three</Column>
           </Row>
           <Row className={styles.gridRow}>
             <Column size={12}>twelve</Column>
